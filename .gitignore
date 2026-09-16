@@ -1,0 +1,11 @@
+# Raw source data — large; download from Kaggle instead (see README)
+Source/archive/
+
+# Personal / non-repo working materials
+Claude outputs/
+_to_delete/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini

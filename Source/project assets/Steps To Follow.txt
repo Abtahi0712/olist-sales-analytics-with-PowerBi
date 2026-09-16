@@ -1,0 +1,29 @@
+1. Download Olist dataset (ZIP) from Kaggle and extract all CSV files.
+
+2. Create PostgreSQL database (e.g., olist_db).
+
+3. Create raw tables in PostgreSQL for all CSVs (orders, order_items, customers, products, sellers, payments, reviews, category_translation, etc.).
+
+4. Load CSV data into raw tables (COPY / pgAdmin import).
+
+5. Validate data (row counts, null checks, sample select, keys uniqueness).
+
+6. Create required indexes on join/filter columns (order_id, customer_id, product_id, seller_id, purchase_timestamp, etc.).
+
+7. Create BI Views (cleaned/optimized):
+
+8. Test BI Views in SQL (run SELECT queries, verify no duplication, correct totals).
+
+9. Open Power BI Desktop → Get Data → PostgreSQL → DirectQuery.
+
+10. Load only BI views (mainly bi_fact_sales, plus optional dims).
+
+11. Create/import DimDate (recommended as Import) and relate to purchase_date.
+
+12. Build relationships (if using separate dims) + confirm storage mode is DirectQuery.
+
+13. Create DAX measures (Revenue, Orders, Customers, AOV, YoY, On-time %, Rating, etc.).
+
+14. Create report pages (Overview, Sales, Products, Customers, Logistics, Reviews, Payments, Sellers).
+
+15. Optimize performance (avoid heavy visuals, limit high-cardinality columns, reduce cross-filtering, check Performance Analyzer).
