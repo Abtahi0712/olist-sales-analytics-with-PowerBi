@@ -20,6 +20,32 @@ Full technical documentation (schema, data model, DAX reference, findings, issue
 | On-time delivery | 93.23% |
 | Average rating | 4.03 / 5 |
 
+---
+
+## 📸 Dashboard Screenshots
+
+<p align="center">
+  <img src="Dashboard/Overview.png" alt="Overview dashboard – Revenue $14.21M, KPIs, monthly trends, top categories, geo map" width="700"/>
+  <br/><em>Overview — Revenue KPIs, monthly order trends, top 10 categories by revenue, and geographic distribution</em>
+</p>
+
+<p align="center">
+  <img src="Dashboard/Sales.png" alt="Sales dashboard – Revenue vs Last Year, rolling 30-day trend, category × year breakdown" width="700"/>
+  <br/><em>Sales — Revenue vs prior year, rolling 30-day trend line, and category × year breakdown table</em>
+</p>
+
+<p align="center">
+  <img src="Dashboard/Delivery.png" alt="Delivery dashboard – 93.23% on-time rate, avg delivery days by month, late orders by month" width="700"/>
+  <br/><em>Delivery — 93.23% on-time rate, average delivery days by month, and late order volume trend</em>
+</p>
+
+<p align="center">
+  <img src="Dashboard/Category%20%26%20Products.png" alt="Category & Products – AOV vs orders scatter, category performance table, revenue treemap" width="700"/>
+  <br/><em>Category &amp; Products — AOV vs order count scatter, category performance summary, and revenue treemap</em>
+</p>
+
+---
+
 ## Architecture
 
 ```
@@ -39,7 +65,11 @@ Kaggle CSVs  →  PostgreSQL raw tables  →  BI views  →  Power BI (DirectQue
 ├── LICENSE
 ├── Dashboard/
 │   ├── Analytical Dashboard.pbix
-│   └── Analytical Dashboard.pdf               # static export of the report
+│   ├── Analytical Dashboard.pdf               # static export of the report
+│   ├── Overview.png
+│   ├── Sales.png
+│   ├── Delivery.png
+│   └── Category & Products.png
 └── Source/
     ├── project assets/
     │   ├── Tables.sql               # raw table DDL
